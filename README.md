@@ -27,5 +27,5 @@ Things you'll need to do (see the [language support example](https://codemirror.
 - go to the main SEP repo
 - go to the branch "experimental/prosemirror-with-codemirror"
 - put the .tgz file in the root folder, replacing the previous one
-- run "npm run serve"
+- run "npm run serve" (inside sep repo)
 - open the index.html file from the "src" folder

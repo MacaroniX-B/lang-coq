@@ -19,3 +19,13 @@ Things you'll need to do (see the [language support example](https://codemirror.
  * Optionally add a license.
 
  * Publish. Put your package on npm under a name like `codemirror-lang-EXAMPLE`.
+
+# Testing
+
+- run "npm pack"
+- this creates a .tgz file
+- go to the main SEP repo
+- go to the branch "experimental/prosemirror-with-codemirror"
+- put the .tgz file in the root folder, replacing the previous one
+- run "npm run serve"
+- open the index.html file from the "src" folder

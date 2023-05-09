@@ -6,7 +6,8 @@ expression {
   Identifier |
   String |
   Boolean |
-  Application { "(" expression* ")" }
+  Application { "(" expression* ")" } |
+  Vernacular
 }
 
 @tokens {
@@ -21,6 +22,10 @@ expression {
   space { $[ \t\n\r]+ }
 
   "(" ")"
+
+  Vernacular { "Abort" | "About" | "Add" }
+
+  @precedence { Vernacular, Identifier }
 }
 
 @detectDelim

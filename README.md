@@ -22,6 +22,9 @@ Things you'll need to do (see the [language support example](https://codemirror.
 
 # Testing
 
+- change the version number in package.json (increment it)
+- ATTENTION: not doing the above, later at the installation process, npm install would ignore your file
+- run "npm run prepare"
 - run "npm pack"
 - this creates a .tgz file
 - go to the main SEP repo

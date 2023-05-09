@@ -1,6 +1,23 @@
 import {parser} from "./syntax.grammar"
-import {LRLanguage, LanguageSupport, indentNodeProp, foldNodeProp, foldInside, delimitedIndent} from "@codemirror/language"
-import {styleTags, tags as t} from "@lezer/highlight"
+import {
+  LRLanguage,
+  LanguageSupport,
+  indentNodeProp,
+  foldNodeProp,
+  foldInside,
+  delimitedIndent,
+  HighlightStyle,
+  syntaxHighlighting
+} from "@codemirror/language"
+import {Tag, styleTags, tags as t} from "@lezer/highlight"
+
+let customTags = {
+  vernacular: Tag.define()
+}
+
+export let highlight = HighlightStyle.define([
+  { tag: customTags.vernacular, color:"#39FF14" }
+])
 
 export const coqLanguage = LRLanguage.define({
   parser: parser.configure({
@@ -16,7 +33,8 @@ export const coqLanguage = LRLanguage.define({
         Boolean: t.bool,
         String: t.string,
         LineComment: t.lineComment,
-        "( )": t.paren
+        "( )": t.paren,
+        Vernacular: customTags.vernacular
       })
     ]
   }),
@@ -27,4 +45,8 @@ export const coqLanguage = LRLanguage.define({
 
 export function coq() {
   return new LanguageSupport(coqLanguage)
+}
+
+export function coqSyntaxHighlighting() {
+  return syntaxHighlighting(highlight);
 }

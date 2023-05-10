@@ -23,7 +23,41 @@ expression {
 
   "(" ")"
 
-  Vernacular { "Abort" | "About" | "Add" }
+  VeracularImport { "From" | "Require" | "Import" | "Export"| "Local" | "Global" | "Include" }
+
+  VernacularScope { "Open"| "Close"| "Delimit" | "Undelimit" | "Bind" }
+
+  Theorem { "Theorem" | "Lemma" | "Remark" | "Fact" | "Corollary" | "Property" | "Proposition" | "Goal" }
+
+
+
+  Vernacular { "Abort" | "About"| "Add" | "All" | "Arguments" | "Asymmetric" | "Axiom" |
+    "Bind" |
+    "Canonical" | "Check" | "Class" | "Close" | "Coercion" | "CoFixpoint" | "Comments" |
+    "CoInductive" | "Compute" | "Context" | "Constructors" | "Contextual" | "Corollary" |
+    "Defined" | "Definition" | "Delimit" |
+    "Fail" |
+    "Eval" |
+    "End" | "Example" | "Export" |
+    "Fact" | "Fixpoint" | "From" |
+    "Global" | "Goal" | "Graph" |
+    "Hint" | "Hypotheses" | "Hypothesis" |
+    "Implicit" | "Implicits" | "Import" | "Inductive" | "Infix" | "Instance" |
+    "Lemma" | "Let" | "Local" | "Ltac" |
+    "Module" | "Morphism" |
+    "Next" | "Notation" |
+    "Obligation" | "Open" |
+    "Parameter" | "Parameters" | "Prenex" | "Print" | "Printing" | "Program" |
+    "Patterns" | "Projections" | "Proof" |
+    "Proposition" |
+    "Qed" |
+    "Record" | "Relation" | "Remark" | "Require" | "Reserved" | "Resolve" | "Rewrite" |
+    "Save" | "Scope" | "Search" | "SearchAbout" | "Section" | "Set" | "Show" | "Strict" | "Structure" |
+    "Tactic" | "Time" | "Theorem" | "Types" |
+    "Unset" |
+    "Variable" | "Variables" | "View"}
+
+  
 
   @precedence { Vernacular, Identifier }
 }

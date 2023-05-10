@@ -16,7 +16,7 @@ let customTags = {
 }
 
 export let highlight = HighlightStyle.define([
-  { tag: customTags.vernacular, color:"#39FF14" }
+  { tag: customTags.vernacular, color:"#6637dd" }
 ])
 
 export const coqLanguage = LRLanguage.define({
@@ -39,7 +39,7 @@ export const coqLanguage = LRLanguage.define({
     ]
   }),
   languageData: {
-    commentTokens: {line: ";"}
+    // commentTokens: {line: ";"}
   }
 })
 
